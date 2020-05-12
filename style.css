@@ -1,0 +1,160 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+/* gothic-a1-200 - latin */
+/* roboto-100 - latin */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 100;
+    src: url('./assets/fonts/roboto-v20-latin-100.eot'); /* IE9 Compat Modes */
+    src: local('Roboto Thin'), local('Roboto-Thin'),
+         url('./assets/fonts/roboto-v20-latin-100.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('./assets/fonts/roboto-v20-latin-100.woff2') format('woff2'), /* Super Modern Browsers */
+         url('./assets/fonts/roboto-v20-latin-100.woff') format('woff'), /* Modern Browsers */
+         url('./assets/fonts/roboto-v20-latin-100.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('./assets/fonts/roboto-v20-latin-100.svg#Roboto') format('svg'); /* Legacy iOS */
+  }
+  /* roboto-300 - latin */
+  @font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    src: url('./assets/fonts/roboto-v20-latin-300.eot'); /* IE9 Compat Modes */
+    src: local('Roboto Light'), local('Roboto-Light'),
+         url('./assets/fonts/roboto-v20-latin-300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('./assets/fonts/roboto-v20-latin-300.woff2') format('woff2'), /* Super Modern Browsers */
+         url('./assets/fonts/roboto-v20-latin-300.woff') format('woff'), /* Modern Browsers */
+         url('./assets/fonts/roboto-v20-latin-300.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('./assets/fonts/roboto-v20-latin-300.svg#Roboto') format('svg'); /* Legacy iOS */
+  }
+  /* roboto-regular - latin */
+  @font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./assets/fonts/roboto-v20-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local('Roboto'), local('Roboto-Regular'),
+         url('./assets/fonts/roboto-v20-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('./assets/fonts/roboto-v20-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('./assets/fonts/roboto-v20-latin-regular.woff') format('woff'), /* Modern Browsers */
+         url('./assets/fonts/roboto-v20-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('./assets/fonts/roboto-v20-latin-regular.svg#Roboto') format('svg'); /* Legacy iOS */
+  }
+
+
+
+body {  
+    background-color: black;
+
+}
+.bg-image {
+    background-image: url("./assets/images/maze-bg.jpg") ;
+    height: 100vh;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: [col1] 20% [col2] auto [col3] 20%;
+    grid-template-rows: [row1] 35% [row2] 35% [row3] auto [row4] 10%;
+}
+
+.center {
+    grid-column-start: col2;
+    grid-column-end: col3;
+    grid-row-start: row2;
+    grid-row-end: row3;
+}
+
+.bottom {
+    grid-column-start: col2;
+    grid-column-end: col3;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+.center-bottom {
+    grid-column-start: col2;
+    grid-column-end: col3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    margin: 0 auto;
+}
+button {
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+}
+.center-bottom h3,p  {
+    color: #E0E0E0;
+    letter-spacing: 3px;
+    font-weight: 300;
+    font-family: 'Roboto', sans-serif;
+ 
+}
+
+h3 {
+    border-bottom: solid;
+    width: fit-content
+}
+#impText {
+    display: none;
+}
+
+
+a {
+    color: #E0E0E0;
+   margin: 1.1rem;
+}
+a:visited {
+    color: #E0E0E0;
+}
+a:hover {
+    color: black;
+}
+
+
+
+@media only screen
+ 
+and (max-device-width: 800px)
+ 
+and (-webkit-min-device-pixel-ratio: 2)
+ 
+and (orientation: portrait) {
+
+ .bg-image {
+     background-size: cover;
+     background-position: center;
+     overflow: hidden;
+ }
+
+.center img {
+    height:10vh;
+}
+.row a {
+    height: 10vh;
+}
+.container {
+    grid-template-columns: [col1] auto [col2] auto [col3] auto;
+    grid-template-rows: [row1] 35% [row2] 25% [row3] auto [row4] 20%;
+}
+.center-bottom h3  {
+    font-size: 1.35rem;;
+ 
+}
+.center-bottom p  {
+    font-size: 1rem;;
+ 
+}
+}
+
